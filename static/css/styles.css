@@ -1971,82 +1971,62 @@ background:#3b82f6;
    TOAST / TARJETA
 =========================== */
 
-.toast{
+.toast {
+    position: fixed;
+    top: 30px;
+    right: 30px;
 
-position:fixed;
+    background: #1b2944;
+    border: 1px solid rgba(255, 255, 255, 0.08);
 
-top:30px;
-right:30px;
+    padding: 18px 22px;
+    border-radius: 18px;
 
-background:#1b2944;
+    display: flex;
+    align-items: center;
+    gap: 15px;
 
-border:1px solid rgba(255,255,255,.08);
+    min-width: 320px;
+    z-index: 999999;
 
-padding:18px 22px;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.35);
 
-border-radius:18px;
+    /* Estado oculto */
+    transform: translateX(450px);
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
 
-display:flex;
-
-align-items:center;
-
-gap:15px;
-
-min-width:320px;
-
-z-index:999999;
-
-box-shadow:
-0 20px 50px rgba(0,0,0,.35);
-
-transform:
-translateX(450px);
-
-opacity:0;
-
-transition:.45s ease;
-
+    transition:
+        transform 0.45s ease,
+        opacity 0.45s ease,
+        visibility 0.45s ease;
 }
 
-.toast.show{
-
-transform:
-translateX(0);
-
-opacity:1;
-
+.toast.show {
+    transform: translateX(0);
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
 }
 
-.toast i{
-
-font-size:28px;
-
-color:#02e1ff;
-
+.toast i {
+    font-size: 28px;
+    color: #02e1ff;
+    flex-shrink: 0;
 }
 
-.toast-content h4{
-
-margin-bottom:4px;
-
-font-size:18px;
-
+.toast-content h4 {
+    margin: 0 0 4px;
+    font-size: 18px;
+    color: #fff;
 }
 
-.toast-content p{
-
-color:#9db0d6;
-
-font-size:15px;
-
+.toast-content p {
+    margin: 0;
+    color: #9db0d6;
+    font-size: 15px;
 }
-
-.toast.hidden{
-
-display:none;
-
-}
-
 
 /* ==========================================
    EQUIPO CON IMAGENES
