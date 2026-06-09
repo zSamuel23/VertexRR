@@ -158,3 +158,5 @@ document.addEventListener(
         cargarEmprendimientos();
     }
 );
+document.getElementById("toast").classList.add("show");
+document.getElementById("toast").classList.remove("show");
