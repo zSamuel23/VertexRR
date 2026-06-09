@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
+
+<title>Perfil | Vertex</title>
+
+<link rel="stylesheet"
+href="/static/css/styles.css">
+
+<link rel="preconnect"
+href="https://fonts.googleapis.com">
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+rel="stylesheet">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+</head>
+
+<body>
+
+<header>
+
+<div class="navbar">
+
+<div class="logo">
+
+VERTEX
+
+</div>
+
+<nav>
+
+
+<a href="/"
+class="btn-nav">
+
+Volver
+
+</a>
+
+</div>
+
+</header>
+
+<section class="perfil-container">
+
+<div class="perfil-card">
+
+<div class="profile-avatar">
+
+<i class="fa-regular fa-user"></i>
+
+</div>
+
+<h1>
+
+Crear Perfil
+
+</h1>
+
+<form id="profileForm" action="/guardar" method="POST">
+
+<input
+type="text"
+id="businessName"
+name="businessName"
+placeholder="Nombre del emprendimiento"
+required>
+
+<textarea
+id="businessDesc"
+name="businessDesc"
+placeholder="Descripción del emprendimiento"
+required></textarea>
+
+<input
+type="text"
+id="phone"
+name="phone"
+placeholder="Teléfono">
+
+<input
+type="url"
+id="website"
+name="website"
+placeholder="Sitio web">
+
+<input
+type="url"
+id="instagram"
+name="instagram"
+placeholder="Instagram">
+
+<input
+type="url"
+id="facebook"
+name="facebook"
+placeholder="Facebook">
+
+<input
+type="url"
+id="whatsapp"
+name="whatsapp"
+placeholder="WhatsApp">
+
+<input
+type="file"
+id="bannerInput"
+name="bannerInput"
+accept="image/*">
+
+<button type="submit">
+    Guardar Perfil
+</button>
+</form>
+
+</div>
+
+</section>
+
+<!-- PREVIEW DEL EMPRENDIMIENTO -->
+
+<section
+id="previewSection"
+class="business-preview hidden">
+
+<div class="preview-card">
+
+<img
+id="previewBanner"
+src="https://via.placeholder.com/1200x400"
+alt="Banner">
+
+<div class="preview-content">
+
+<h2 id="previewName">
+
+Tu emprendimiento
+
+</h2>
+
+<p id="previewDescription">
+
+Aquí aparecerá la descripción.
+
+</p>
+
+<div class="business-actions">
+
+<button
+id="editBusinessBtn"
+class="edit-btn">
+
+Editar Emprendimiento
+
+</button>
+
+</div>
+
+<a href="#"
+class="preview-btn">
+
+Ver más
+
+</a>
+
+<div class="preview-socials">
+
+<a id="siteLink" href="#">
+
+<i class="fa-solid fa-globe"></i>
+
+</a>
+
+<a id="igLink" href="#">
+
+<i class="fa-brands fa-instagram"></i>
+
+</a>
+
+<a id="fbLink" href="#">
+
+<i class="fa-brands fa-facebook"></i>
+
+</a>
+
+<a id="waLink" href="#">
+
+<i class="fa-brands fa-whatsapp"></i>
+
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+  <!-- ESTADO DE APROBACIÓN -->
+
+<section
+id="approvalSection"
+class="approval-status hidden">
+
+<h2>
+
+Estado del Emprendimiento
+
+</h2>
+
+<div class="status-card">
+
+<span class="pending-badge">
+
+Pendiente de aprobación
+
+</span>
+
+<p>
+
+Todos los cambios realizados en tu emprendimiento serán revisados por el administrador antes de hacerse públicos.
+
+</p>
+
+</div>
+
+</section>
+
+<!-- HISTORIAL -->
+
+<section
+id="historial"
+class="history-section hidden">
+
+<h2>
+
+Historial de Publicaciones
+
+</h2>
+
+<div id="historyContainer">
+
+<div class="history-card">
+
+<h3>
+
+Emprendimiento creado
+
+</h3>
+
+<p>
+
+Registro inicial
+
+</p>
+
+<span class="approved">
+
+Aprobado
+
+</span>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- OPINIONES -->
+
+<section
+id="opiniones"
+class="survey-section hidden">
+
+<h2>
+
+Opiniones y Propuestas
+
+</h2>
+
+<form class="survey-form">
+
+<textarea
+placeholder="¿Qué te gustaría mejorar de Vertex?">
+</textarea>
+
+<textarea
+placeholder="¿Qué función te gustaría agregar?">
+</textarea>
+
+<select>
+
+<option>
+⭐
+</option>
+
+<option>
+⭐⭐
+</option>
+
+<option>
+⭐⭐⭐
+</option>
+
+<option>
+⭐⭐⭐⭐
+</option>
+
+<option>
+⭐⭐⭐⭐⭐
+</option>
+
+</select>
+
+<button type="submit">
+
+Enviar Opinión
+
+</button>
+
+</form>
+
+</section>
+
+<!-- FOOTER -->
+
+<footer>
+
+<div class="footer-left">
+
+<h3>
+
+VERTEX
+
+</h3>
+
+<p>
+
+Impulsando el crecimiento de emprendedores mediante innovación digital.
+
+</p>
+
+</div>
+
+<div class="footer-icons">
+
+<i class="fa-brands fa-instagram"></i>
+
+<i class="fa-brands fa-facebook"></i>
+
+<i class="fa-brands fa-whatsapp"></i>
+
+<i class="fa-regular fa-envelope"></i>
+
+</div>
+
+</footer>
+
+<!-- TOAST -->
+
+<div
+id="toast"
+class="toast hidden">
+
+<i
+id="toastIcon"
+class="fa-solid fa-circle-check">
+</i>
+
+<div class="toast-content">
+
+<h4 id="toastTitle">
+
+Éxito
+
+</h4>
+
+<p id="toastMessage">
+
+Acción realizada correctamente.
+
+</p>
+
+</div>
+
+</div>
+
+<script src="/static/js/perfil.js"></script>
+
+</body>
+</html>
